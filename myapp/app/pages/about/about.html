@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      朋友
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="about">
+  <ion-list>
+    <ion-item *ngFor="let item of list" (click)="itemClick($event,item)">
+      <ion-avatar item-left>
+        <img src="../images/{{item.id}}.jpg"/>
+      </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.description}}</p>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-avatar item-left>
+        <img src="../images/2.jpg"/>
+      </ion-avatar>
+        <h2>长草君</h2>
+        <p>长草颜文字乔巴</p>
+    </ion-item> -->
+  </ion-list>
+</ion-content>
